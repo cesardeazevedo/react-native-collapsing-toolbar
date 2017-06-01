@@ -1,0 +1,12 @@
+rootProject.name = 'RNCollapsingToolbarExample'
+
+include ':app'
+
+include ':react-native-collapsing-toolbar'
+project(':react-native-collapsing-toolbar').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-collapsing-toolbar/android')
+
+include 'react-native-nested-scroll-view'
+project(':react-native-nested-scroll-view').projectDir = new File('../node_modules/react-native-nested-scroll-view/android')
+
+include ':react-native-vector-icons'
+project(':react-native-vector-icons').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-vector-icons/android')

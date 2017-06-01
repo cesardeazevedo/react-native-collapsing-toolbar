@@ -1,0 +1,23 @@
+{
+  "name": "react-native-collapsing-toolbar",
+  "version": "1.0.0",
+  "description": "React Native wrapper for android CollapsingToolbarLayout",
+  "author": "Cesar Augusto <cesardeazevedo@outlook.com>",
+  "keywords": [
+    "android",
+    "react-native",
+    "collapsing",
+    "toolbar",
+    "collapsing-toolbar",
+    "parallax",
+    "coordinatorLayout"
+  ],
+  "dependencies": {
+    "prop-types": "^15.5.10",
+    "react-native-nested-scroll-view": "file:../react-native-nested-scroll-view/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cesardeazevedo/react-native-collapsing-toolbar.git"
+  }
+}

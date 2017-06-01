@@ -1,0 +1,40 @@
+apply plugin: "com.android.library"
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "23.0.1"
+
+    defaultConfig {
+        minSdkVersion 16
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+    }
+}
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:2.2.3'
+    }
+}
+
+allprojects {
+    repositories {
+        mavenLocal()
+        jcenter()
+        maven {
+            // All of React Native (JS, Obj-C sources, Android binaries) is installed from npm
+            url "$projectDir/../example/node_modules/react-native/android"
+        }
+    }
+}
+
+dependencies {
+    // compile project(':react-native-nested-scroll-view')
+    compile 'com.facebook.react:react-native:+'
+    compile 'com.android.support:appcompat-v7:25.3.1'
+    compile 'com.android.support:design:25.3.1'
+}
