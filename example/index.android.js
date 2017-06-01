@@ -29,7 +29,7 @@ const data = Array(50).fill().map((_, index) => ({key: index}))
 const HEADER_HEIGHT = 250
 const { width } = Dimensions.get('window')
 
-export default class RNCollapsibleToolbar extends Component {
+export default class RNCollapsingToolbar extends Component {
   state = {
     icon: null,
     scrollY: new Animated.Value(0),
@@ -73,7 +73,7 @@ export default class RNCollapsibleToolbar extends Component {
         <StatusBar translucent backgroundColor='#512DA8' />
         <View style={styles.statusBar} />
         <CoordinatorLayout>
-          <AppBarLayout height={70} onOffsetChanged={this.handleOffsetChanged} style={styles.appbar}>
+          <AppBarLayout onOffsetChanged={this.handleOffsetChanged} style={styles.appbar}>
             <CollapsingToolbarLayout
               title='Collapsing Toolbar'
               contentScrimColor='#673AB7'
@@ -97,10 +97,6 @@ export default class RNCollapsibleToolbar extends Component {
                 </View>
               </CollapsingParallax>
               <ToolbarAndroid
-                title='ToolbarReact'
-                titleColor='#eeeeee'
-                navIcon={icon}
-                style={styles.toolbar}
                 actions={[{title: 'Settings'}]}
               />
             </CollapsingToolbarLayout>
@@ -159,4 +155,4 @@ const styles = StyleSheet.create({
   },
 });
 
-AppRegistry.registerComponent('RNCollapsingToolbarExample', () => RNCollapsibleToolbar);
+AppRegistry.registerComponent('RNCollapsingToolbarExample', () => RNCollapsingToolbar);
