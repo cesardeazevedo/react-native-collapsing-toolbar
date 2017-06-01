@@ -1,4 +1,4 @@
-package com.rncollapsingtoolbarlayout;
+package com.rncollapsingtoolbar;
 
 import android.support.annotation.Nullable;
 import android.support.design.widget.AppBarLayout;

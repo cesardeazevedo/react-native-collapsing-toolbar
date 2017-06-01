@@ -1,4 +1,4 @@
-package com.rncollapsingtoolbarlayout;
+package com.rncollapsingtoolbar;
 
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.widget.FrameLayout;

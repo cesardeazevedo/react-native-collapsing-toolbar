@@ -8,7 +8,7 @@ import com.facebook.react.ReactPackage;
 import com.facebook.react.shell.MainReactPackage;
 import com.facebook.soloader.SoLoader;
 import com.oblador.vectoricons.VectorIconsPackage;
-import com.rncollapsingtoolbarlayout.RNCollapsingToolbarPackage;
+import com.rncollapsingtoolbar.RNCollapsingToolbarPackage;
 import com.rnnestedscrollview.RNNestedScrollViewPackage;
 
 import java.util.Arrays;

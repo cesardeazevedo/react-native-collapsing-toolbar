@@ -1,4 +1,4 @@
-package com.rncollapsingtoolbarlayout;
+package com.rncollapsingtoolbar;
 
 import android.graphics.Color;
 import android.graphics.Typeface;

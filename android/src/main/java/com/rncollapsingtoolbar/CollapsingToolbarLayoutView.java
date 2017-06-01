@@ -1,7 +1,6 @@
-package com.rncollapsingtoolbarlayout;
+package com.rncollapsingtoolbar;
 
 import android.content.Context;
-import android.graphics.Color;
 import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.CollapsingToolbarLayout;
 
