@@ -14,7 +14,7 @@
   ],
   "dependencies": {
     "prop-types": "^15.5.10",
-    "react-native-nested-scroll-view": "1.0.0"
+    "react-native-nested-scroll-view": "2.0.0"
   },
   "repository": {
     "type": "git",
