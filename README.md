@@ -121,6 +121,8 @@ render() {
 
 To work with FlatList, you should just pass the `renderScrollComponent` props and render a NestedScrollView instead of the ScrollView.
 
+**NOTE:** RefreshControl is **NOT** supported yet.
+
 ```jsx
 renderScroll(props) {
   return (
