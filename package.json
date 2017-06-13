@@ -1,6 +1,6 @@
 {
   "name": "react-native-collapsing-toolbar",
-  "version": "1.0.0-beta.3",
+  "version": "1.0.0-beta.4",
   "description": "React Native wrapper for android CollapsingToolbarLayout",
   "author": "Cesar Augusto <cesardeazevedo@outlook.com>",
   "keywords": [
