@@ -17,7 +17,7 @@ import com.facebook.react.views.text.ReactFontManager;
 
 public class CollapsingToolbarLayoutManager extends ViewGroupManager<CollapsingToolbarLayoutView> {
 
-    private final static String REACT_CLASS = "RCTCollapsingToolbarLayout";
+    private final static String REACT_CLASS = "CTLCollapsingToolbarLayout";
 
     private int height = 56;
 

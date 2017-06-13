@@ -9,7 +9,7 @@ import com.facebook.react.uimanager.annotations.ReactProp;
 
 public class CollapsingParallaxManager extends ViewGroupManager<FrameLayout> {
 
-    private final static String REACT_CLASS = "RCTCollapsingParallax";
+    private final static String REACT_CLASS = "CTLCollapsingParallax";
 
     @Override
     public String getName() {

@@ -19,7 +19,7 @@ import java.util.Map;
 public class AppBarLayoutManager extends ViewGroupManager<AppBarLayoutView>
     implements AppBarLayout.OnOffsetChangedListener  {
 
-    private final static String REACT_CLASS = "RCTAppBarLayout";
+    private final static String REACT_CLASS = "CTLAppBarLayout";
 
     @Override
     public String getName() {
