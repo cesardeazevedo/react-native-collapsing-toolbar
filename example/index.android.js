@@ -24,7 +24,7 @@ import {
   NestedScrollView,
 } from 'react-native-collapsing-toolbar'
 
-const data = Array(50).fill().map((_, index) => ({key: index}))
+const data = Array(20).fill().map((_, index) => ({key: index}))
 
 const HEADER_HEIGHT = 250
 const { width } = Dimensions.get('window')
@@ -69,7 +69,7 @@ export default class RNCollapsingToolbar extends Component {
 
     // Only render scene when md-menu icon is ready
     return icon && (
-      <View>
+      <View style={styles.container}>
         <StatusBar translucent backgroundColor='#512DA8' />
         <View style={styles.statusBar} />
         <CoordinatorLayout>
@@ -113,12 +113,15 @@ export default class RNCollapsingToolbar extends Component {
 }
 
 const styles = StyleSheet.create({
+  container: {
+    paddingBottom: 550
+  },
   appbar: {
     height: HEADER_HEIGHT,
     backgroundColor: 'black',
   },
   nestedScroll: {
-    backgroundColor: '#f5f5f5'
+    backgroundColor: '#f5f5f5',
   },
   toolbar: {
     height: 56,
