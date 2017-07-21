@@ -44,7 +44,7 @@ export default class RNCollapsingToolbar extends Component {
 
   handleOffsetChanged = (e) => {
     Animated.event(
-      [{ nativeEvent: { offset: this.state.scrollY }}, { useNativeDriver: true }]
+      [{ nativeEvent: { offset: this.state.scrollY }}]
     )(e, this.state)
   }
 
