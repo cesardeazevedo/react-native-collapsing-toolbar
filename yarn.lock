@@ -77,9 +77,9 @@ prop-types@^15.5.10:
     fbjs "^0.8.9"
     loose-envify "^1.3.1"
 
-react-native-nested-scroll-view@2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/react-native-nested-scroll-view/-/react-native-nested-scroll-view-2.0.0.tgz#9ec763bdb0463e908ea174be9cea91c218dcb18d"
+react-native-nested-scroll-view@3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/react-native-nested-scroll-view/-/react-native-nested-scroll-view-3.0.0.tgz#9ccf3fc9a6ad3375f040c4e90a0b573df23c76ad"
 
 setimmediate@^1.0.5:
   version "1.0.5"
