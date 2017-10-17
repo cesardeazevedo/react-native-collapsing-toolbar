@@ -13,8 +13,7 @@
     "coordinatorLayout"
   ],
   "dependencies": {
-    "prop-types": "^15.5.10",
-    "react-native-nested-scroll-view": "4.0.0"
+    "prop-types": "^15.5.10"
   },
   "repository": {
     "type": "git",
