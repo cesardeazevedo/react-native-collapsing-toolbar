@@ -115,7 +115,7 @@ render() {
       <NestedScrollView>
       // Main Content
       </NestedScrollView>
-    <CoordinatorLayout>
+    </CoordinatorLayout>
   )
 }
 
