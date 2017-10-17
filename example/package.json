@@ -8,8 +8,9 @@
     "test": "jest"
   },
   "dependencies": {
-    "react": "16.0.0-alpha.12",
-    "react-native": "0.48.4",
+    "react": "16.0.0",
+    "react-native": "0.49.3",
+    "react-native-nested-scroll-view": "5.0.1",
     "react-native-collapsing-toolbar": "file:../",
     "react-native-vector-icons": "^4.3.0"
   },
