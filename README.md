@@ -69,8 +69,7 @@ include ':app'
 
 # Usage
 
-This package depends of [react-native-nested-scroll-view](https://github.com/cesardeazevedo/react-native-nested-scroll-view), which we already exposes for you.
-
+This package depends of [react-native-nested-scroll-view](https://github.com/cesardeazevedo/react-native-nested-scroll-view).
 
 **Note** This component is very easy to break, you should follows this exact component order to make it work.
 
