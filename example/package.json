@@ -10,6 +10,7 @@
   "dependencies": {
     "react": "16.0.0",
     "react-native": "0.51.0",
+    "react-native-nested-scroll-view": "6.0.0",
     "react-native-collapsing-toolbar": "file:../",
     "react-native-vector-icons": "^4.3.0"
   },

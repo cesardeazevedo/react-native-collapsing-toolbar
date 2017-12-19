@@ -9,11 +9,12 @@ easy to integrate with Animated.Event and FlatList out the box.
 
 ## Getting started
 
+Make sure to install both `react-native-collapsing-toolbar` and `react-native-nested-scroll-view`.
+
+`$ npm install react-native-nested-scroll-view --save`
 `$ npm install react-native-collapsing-toolbar --save`
 
 ### Installation
-
-Make sure to add both `react-native-collapsing-toolbar` and `react-native-nested-scroll-view`
 
 MainActivity.java
 
@@ -68,8 +69,7 @@ include ':app'
 
 # Usage
 
-This package depends of [react-native-nested-scroll-view](https://github.com/cesardeazevedo/react-native-nested-scroll-view), which we already exposes for you.
-
+This package depends of [react-native-nested-scroll-view](https://github.com/cesardeazevedo/react-native-nested-scroll-view).
 
 **Note** This component is very easy to break, you should follows this exact component order to make it work.
 
@@ -80,8 +80,9 @@ import {
   CoordinatorLayout,
   CollapsingToolbarLayout,
   CollapsingParallax,
-  NestedScrollView,
 } from 'react-native-collapsing-toolbar'
+
+import NestedScrollView from 'react-native-nested-scroll-view'
 
 
 render() {
@@ -113,7 +114,7 @@ render() {
       <NestedScrollView>
       // Main Content
       </NestedScrollView>
-    <CoordinatorLayout>
+    </CoordinatorLayout>
   )
 }
 

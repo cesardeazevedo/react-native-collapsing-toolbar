@@ -21,8 +21,9 @@ import {
   CoordinatorLayout,
   CollapsingToolbarLayout,
   CollapsingParallax,
-  NestedScrollView,
 } from 'react-native-collapsing-toolbar'
+
+import NestedScrollView from 'react-native-nested-scroll-view'
 
 const data = Array(20).fill().map((_, index) => ({key: index}))
 
