@@ -2,6 +2,7 @@ package com.rncollapsingtoolbar;
 
 import android.support.annotation.Nullable;
 import android.support.design.widget.AppBarLayout;
+import android.view.ViewGroup;
 
 import com.facebook.react.bridge.Arguments;
 import com.facebook.react.bridge.ReactContext;
@@ -35,7 +36,7 @@ public class AppBarLayoutManager extends ViewGroupManager<AppBarLayoutView>
 
     @ReactProp(name = "height")
     public void setHeight(AppBarLayoutView view, int height) {
-        AppBarLayout.LayoutParams params = (AppBarLayout.LayoutParams) view.getLayoutParams();
+        ViewGroup.LayoutParams params = view.getLayoutParams();
         params.height = (int) PixelUtil.toPixelFromDIP(height);
         view.setLayoutParams(params);
     }
