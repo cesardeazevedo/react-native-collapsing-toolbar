@@ -25,6 +25,7 @@ public class AppBarLayoutManager extends ViewGroupManager<AppBarLayoutView>
 
     public static final int COMMAND_SHOW = 1;
     public static final int COMMAND_HIDE = 2;
+    public static final int COMMAND_REDRAW = 3;
 
     @Override
     public String getName() {
@@ -86,7 +87,8 @@ public class AppBarLayoutManager extends ViewGroupManager<AppBarLayoutView>
     Map<String, Integer> getCommandsMap() {
         return MapBuilder.of(
                 "show", COMMAND_SHOW,
-                "hide", COMMAND_HIDE
+                "hide", COMMAND_HIDE,
+                "redraw", COMMAND_REDRAW
         );
     }
 
@@ -98,6 +100,9 @@ public class AppBarLayoutManager extends ViewGroupManager<AppBarLayoutView>
                 break;
             case COMMAND_HIDE:
                 root.setExpanded(false, true);
+                break;
+            case COMMAND_REDRAW:
+                root.requestLayout();
                 break;
         }
     }
