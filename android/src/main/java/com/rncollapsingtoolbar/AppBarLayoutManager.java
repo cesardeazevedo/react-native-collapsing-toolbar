@@ -40,7 +40,7 @@ public class AppBarLayoutManager extends ViewGroupManager<AppBarLayoutView>
     }
 
     @ReactProp(name = "height")
-    public void setHeight(AppBarLayoutView view, int height) {
+    public void setHeight(AppBarLayoutView view, double height) {
         ViewGroup.LayoutParams params = view.getLayoutParams();
         params.height = (int) PixelUtil.toPixelFromDIP(height);
         view.setLayoutParams(params);
