@@ -11,7 +11,6 @@ import {
   StyleSheet,
   Dimensions,
   AppRegistry,
-  ToolbarAndroid
 } from 'react-native';
 
 import Icon from 'react-native-vector-icons/Ionicons'
@@ -43,6 +42,16 @@ export default class RNCollapsingToolbar extends Component {
     })
   }
 
+  captureAppBarRef = (ref) => {
+    this.appBar = ref
+  }
+
+  handleActionSelected = (action) => {
+    return action === 0 ? this.appBar.show()
+         : action === 1 ? this.appBar.hide()
+         : null
+  }
+
   handleOffsetChanged = (e) => {
     Animated.event(
       [{ nativeEvent: { offset: this.state.scrollY }}]
@@ -68,13 +77,15 @@ export default class RNCollapsingToolbar extends Component {
       outputRange: ["0deg", "-50deg"],
     })
 
-    // Only render scene when md-menu icon is ready
-    return icon && (
+    return (
       <View style={styles.container}>
         <StatusBar translucent backgroundColor='#512DA8' />
         <View style={styles.statusBar} />
         <CoordinatorLayout>
-          <AppBarLayout onOffsetChanged={this.handleOffsetChanged} style={styles.appbar}>
+          <AppBarLayout
+            ref={this.captureAppBarRef}
+            onOffsetChanged={this.handleOffsetChanged}
+            style={styles.appbar}>
             <CollapsingToolbarLayout
               title='Collapsing Toolbar'
               contentScrimColor='#673AB7'
@@ -97,8 +108,11 @@ export default class RNCollapsingToolbar extends Component {
                   />
                 </View>
               </CollapsingParallax>
-              <ToolbarAndroid
-                actions={[{title: 'Settings'}]}
+              <Icon.ToolbarAndroid
+                iconColor='white'
+                onActionSelected={this.handleActionSelected}
+                actions={[{ title: 'Show' }, { title: 'Hide' }]}
+                navIconName={'md-menu'}
               />
             </CollapsingToolbarLayout>
           </AppBarLayout>
