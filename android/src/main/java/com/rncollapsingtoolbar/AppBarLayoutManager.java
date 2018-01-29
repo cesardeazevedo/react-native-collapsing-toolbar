@@ -2,9 +2,11 @@ package com.rncollapsingtoolbar;
 
 import android.support.annotation.Nullable;
 import android.support.design.widget.AppBarLayout;
+import android.view.ViewGroup;
 
 import com.facebook.react.bridge.Arguments;
 import com.facebook.react.bridge.ReactContext;
+import com.facebook.react.bridge.ReadableArray;
 import com.facebook.react.bridge.WritableMap;
 import com.facebook.react.common.MapBuilder;
 import com.facebook.react.uimanager.PixelUtil;
@@ -21,6 +23,10 @@ public class AppBarLayoutManager extends ViewGroupManager<AppBarLayoutView>
 
     private final static String REACT_CLASS = "CTLAppBarLayout";
 
+    public static final int COMMAND_SHOW = 1;
+    public static final int COMMAND_HIDE = 2;
+    public static final int COMMAND_REDRAW = 3;
+
     @Override
     public String getName() {
         return REACT_CLASS;
@@ -34,8 +40,8 @@ public class AppBarLayoutManager extends ViewGroupManager<AppBarLayoutView>
     }
 
     @ReactProp(name = "height")
-    public void setHeight(AppBarLayoutView view, int height) {
-        AppBarLayout.LayoutParams params = (AppBarLayout.LayoutParams) view.getLayoutParams();
+    public void setHeight(AppBarLayoutView view, double height) {
+        ViewGroup.LayoutParams params = view.getLayoutParams();
         params.height = (int) PixelUtil.toPixelFromDIP(height);
         view.setLayoutParams(params);
     }
@@ -74,5 +80,30 @@ public class AppBarLayoutManager extends ViewGroupManager<AppBarLayoutView>
         event.putDouble("offset", verticalOffset);
         ReactContext reactContext = (ReactContext) appBarLayout.getContext();
         reactContext.getJSModule(RCTEventEmitter.class).receiveEvent(appBarLayout.getId(), "topOffsetChanged", event);
+    }
+
+    @Override
+    public @javax.annotation.Nullable
+    Map<String, Integer> getCommandsMap() {
+        return MapBuilder.of(
+                "show", COMMAND_SHOW,
+                "hide", COMMAND_HIDE,
+                "redraw", COMMAND_REDRAW
+        );
+    }
+
+    @Override
+    public void receiveCommand(AppBarLayoutView root, int commandId, @javax.annotation.Nullable ReadableArray args) {
+        switch (commandId) {
+            case COMMAND_SHOW:
+                root.setExpanded(true, true);
+                break;
+            case COMMAND_HIDE:
+                root.setExpanded(false, true);
+                break;
+            case COMMAND_REDRAW:
+                root.requestLayout();
+                break;
+        }
     }
 }
