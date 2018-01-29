@@ -190,62 +190,21 @@ render() {
 
 ```
 
-# Important Notice
-
-You cannot change Toolbar props at runtime. 
-
-According to [CollapsingToolbarLayout docs](https://developer.android.com/reference/android/support/design/widget/CollapsingToolbarLayout.html):
-
-> **Do not manually add views to the Toolbar at run time**. We will add a 'dummy view' to the Toolbar which allows us to work out the available space for the title. This can interfere with any views which you add.
-
-Whichs isn't very clear, you can get unexpected behaviors and the CollapsingToolbar slides without the Scroll content.
-
-If you are using [react-native-vector-icons](https://github.com/oblador/react-native-vector-icons), it will may not work as expected, it's because vector-icons will load the icon asyncronously, and eventualy call a setState with the loaded icon, which will break the component, a workaround is to load the icon manuallly, delays the component render, and render the icon directly on the react-native ToolbarAndroid and **not** on Icon.ToolbarAndroid, this will ensure that we are rendering the scene at once.
-
-```jsx
-
-// Use the ToolbarAndroid directly from react-native and not from Icon.ToolbarAndroid
-import { ToolbarAndroid } from 'react-native'
-
-import Icon from 'react-native-vector-icons/Ionicons'
-
-class MyCollapsingToolbar extends Component {
-  state = {
-    icon: null
-  };
-
-  componentDidMount() {
-    // Load icon from react-native-vector-icons manually
-    Icon.getImageSource('md-menu', 24, '#fff').then((source) => {
-      // Icon Loaded
-      this.setState({ icon: source })
-    })
-  }
-
-  render() {
-    // Only render scene when md-menu icon is loaded
-    return this.state.icon && (
-      <CoordinatorLayout>
-        <AppBarLayout>
-          <CollapsingToolbarLayout>
-            <CollapsingParallax>
-            </CollapsingParallax>
-            <ToolbarAndroid
-              navIcon={this.state.icon}
-            />
-          </CollapsingToolbarLayout>
-        </AppBarLayout>
-        <NestedScrollView>
-        // Scene
-        </NestedScrollView>
-      </CoordinatorLayout>
-    )
-  }
-}
-
-```
-
 # API
+
+AppBarLayout properties
+
+| Prop                      | Description
+|---------------------------|------------
+| onOffsetChanged           | The actual scroll event when de toolbar is collasping
+
+AppBarLayout Methods
+
+| Method  | Description
+|---------|------------
+| show    | Expands the toolbar
+| hide    | Collapses the toolbar
+| redraw  | Redraw the toolbar (invokes requestLayout)
 
 CollapsingToolbarLayout properties
 
