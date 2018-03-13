@@ -41,6 +41,8 @@ android/app/build.gradle
 
 
 ```diff
+-    compileSdkVersion 23
++    compileSdkVersion 25
 
     dependencies {
         compile fileTree(dir: "libs", include: ["*.jar"])
