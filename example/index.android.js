@@ -24,10 +24,10 @@ import {
 
 import NestedScrollView from 'react-native-nested-scroll-view'
 
-const data = Array(20).fill().map((_, index) => ({key: index}))
+const data = Array(20).fill().map((_, index) => ({key: index.toString()}))
 
 const HEADER_HEIGHT = 250
-const { width } = Dimensions.get('window')
+const { width, height } = Dimensions.get('window')
 
 export default class RNCollapsingToolbar extends Component {
   state = {
@@ -129,7 +129,7 @@ export default class RNCollapsingToolbar extends Component {
 
 const styles = StyleSheet.create({
   container: {
-    paddingBottom: 550
+    height: height - HEADER_HEIGHT,
   },
   appbar: {
     height: HEADER_HEIGHT,
