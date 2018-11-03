@@ -41,14 +41,12 @@ android/app/build.gradle
 
 
 ```diff
-    compileSdkVersion 26
-
     dependencies {
-        compile fileTree(dir: "libs", include: ["*.jar"])
-        compile "com.android.support:appcompat-v7:26.1.0"
-        compile "com.facebook.react:react-native:+"  // From node_modules
-+       compile project(':react-native-collapsing-toolbar')
-+       compile project(':react-native-nested-scroll-view')
+        implementation fileTree(dir: "libs", include: ["*.jar"])
+        implementation "com.android.support:appcompat-v7:${rootProject.ext.supportLibVersion}"
+        implementation "com.facebook.react:react-native:+"  // From node_modules
++       implementation project(':react-native-collapsing-toolbar')
++       implementation project(':react-native-nested-scroll-view')
     }
 
 ```
