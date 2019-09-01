@@ -37,5 +37,5 @@ def safeExtGet(prop, fallback) {
 dependencies {
     compile 'com.facebook.react:react-native:+'
     compile "com.android.support:appcompat-v7:${safeExtGet('supportLibVersion', '26.1.0')}"
-    compile 'com.android.support:design:${safeExtGet('supportLibVersion', '26.1.0')}"
+    compile "com.android.support:design:${safeExtGet('supportLibVersion', '26.1.0')}"
 }
