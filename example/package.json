@@ -8,17 +8,21 @@
     "test": "jest"
   },
   "dependencies": {
-    "react": "16.6.0-alpha.8af6728",
-    "react-native": "^0.57.0",
-    "react-native-nested-scroll-view": "8.0.0",
+    "react": "16.9.0",
+    "react-native": "^0.60.6",
+    "react-native-nested-scroll-view": "9.0.0",
     "react-native-collapsing-toolbar": "file:../",
-    "react-native-vector-icons": "^4.3.0"
+    "react-native-vector-icons": "^6.6.0"
   },
   "devDependencies": {
-    "babel-jest": "23.6.0",
-    "jest": "23.6.0",
-    "metro-react-native-babel-preset": "0.48.3",
-    "react-test-renderer": "16.6.0-alpha.8af6728"
+    "@babel/core": "^7.7.5",
+    "@babel/runtime": "^7.7.5",
+    "@react-native-community/eslint-config": "^0.0.5",
+    "babel-jest": "^24.9.0",
+    "eslint": "^6.7.2",
+    "jest": "^24.9.0",
+    "metro-react-native-babel-preset": "^0.57.0",
+    "react-test-renderer": "16.9.0"
   },
   "jest": {
     "preset": "react-native"
